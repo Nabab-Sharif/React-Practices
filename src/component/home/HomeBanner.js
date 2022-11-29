@@ -1,27 +1,29 @@
 
-import React, { useState } from 'react';
+//Functional components Hooks(useRef)  use here
+
+import React, { useRef } from 'react';
 
 const HomeBanner = (props) => {
 
-  const [color, setColor] = useState("Red");
+  const UserName = useRef();
+  const Password = useRef();
 
 
-  const NewBlue = () => {
-    setColor("Blue");
+  const SubmitForm = () => {
+    const a = UserName.current.value;
+    const b = Password.current.value;
+
+    alert(a);
+    alert(b);
+
   }
-
-
-  const NewGreen = () => {
-    setColor("Green");
-  }
-
 
 
   return (
     <div>
-      <h1>{color}</h1>
-      <button onClick={NewBlue}>Change Blue</button>
-      <button onClick={NewGreen}>Change Green</button>
+      <input ref={UserName} placeholder='User Name' type="text" />
+      <input ref={Password} placeholder='User Password' type="text" />
+      <button onClick={SubmitForm}>Submit</button>
     </div>
   )
 
