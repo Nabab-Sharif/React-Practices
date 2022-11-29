@@ -1,32 +1,41 @@
 
-//Functional components Hooks(useRef)  use here
+//Functional components Hooks(useEffect) use here
+//npm i axios  > install
 
-import React, { useRef } from 'react';
-
-const HomeBanner = (props) => {
-
-  const UserName = useRef();
-  const Password = useRef();
+import { useEffect } from 'react';
+import React, { useState } from 'react';
+import axios from 'axios'
 
 
-  const SubmitForm = () => {
-    const a = UserName.current.value;
-    const b = Password.current.value;
+const HomeBanner = () => {
 
-    alert(a);
-    alert(b);
+  const [todo, SetTodo] = useState([])
 
-  }
+  useEffect(() => {
+
+    //API call
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => {
+        //SetTodo(res.data)
+        setTimeout(() => {
+          SetTodo(res.data)
+        }, 3000)
+      })
+      .catch((err) => {
+
+      })
+
+
+  });
 
 
   return (
     <div>
-      <input ref={UserName} placeholder='User Name' type="text" />
-      <input ref={Password} placeholder='User Password' type="text" />
-      <button onClick={SubmitForm}>Submit</button>
+      {JSON.stringify(todo)}
     </div>
-  )
+  );
 
-}
+};
 
 export default HomeBanner;
