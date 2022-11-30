@@ -1,15 +1,20 @@
 
-import React,{Component}from 'react';
-import HomeBanner from "../component/home/HomeBanner4"
+import React, { Component } from 'react'
+import HomeBanner from "../component/home/HomeBanner"
 
-class HomePage extends Component{
-  render(){
-    return(
+export default class HomePage extends Component {
+
+  constructor(props){
+    super();
+  }
+
+
+
+  render() {
+    return (
       <div>
-        <HomeBanner/>
+        <HomeBanner />
       </div>
     )
   }
 }
-
-export default HomePage;

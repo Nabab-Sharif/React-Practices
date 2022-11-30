@@ -1,32 +1,16 @@
 
-//Functional components Hooks(useRef)  use here
+import React, { Component } from 'react'
 
-import React, { useRef } from 'react';
-
-const HomeBanner = (props) => {
-
-  const UserName = useRef();
-  const Password = useRef();
+export default class HomeBanner extends Component {
 
 
-  const SubmitForm = () => {
-    const a = UserName.current.value;
-    const b = Password.current.value;
-
-    alert(a);
-    alert(b);
-
+  constructor(props){
+    super();
   }
 
-
-  return (
-    <div>
-      <input ref={UserName} placeholder='User Name' type="text" />
-      <input ref={Password} placeholder='User Password' type="text" />
-      <button onClick={SubmitForm}>Submit</button>
-    </div>
-  )
-
+  render() {
+    return (
+      <div>HomeBanner</div>
+    )
+  }
 }
-
-export default HomeBanner;

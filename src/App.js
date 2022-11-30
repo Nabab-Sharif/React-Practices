@@ -1,16 +1,23 @@
 
-import React from 'react';
-import HomePage from './pages/HomePage';
+import React, { Component } from 'react'
+import HomePage from "./pages/HomePage";
 
 
-const App = () => {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  )
+
+export default class App extends Component {
+
+
+  constructor(props) {
+    super();
+
+  }
+
+  render() {
+
+    return (
+      <div>
+        <HomePage />
+      </div>
+    )
+  }
 }
-
-
-
-export default App;
