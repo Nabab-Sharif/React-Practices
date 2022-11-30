@@ -13,7 +13,7 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        <HomeBanner />
+        <HomeBanner title="Welcome to title" subtitle="To Bangladesh" />
       </div>
     )
   }
