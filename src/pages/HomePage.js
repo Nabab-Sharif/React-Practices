@@ -1,6 +1,6 @@
 
 import React,{Component}from 'react';
-import HomeBanner from "../component/home/HomeBanner2"
+import HomeBanner from "../component/home/HomeBanner4"
 
 class HomePage extends Component{
   render(){

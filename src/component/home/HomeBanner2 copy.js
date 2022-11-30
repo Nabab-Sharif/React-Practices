@@ -31,6 +31,9 @@ const HomeBanner2 = () => {
         <td>{list['id']}</td>
         <td>{list['title']}</td>
         <td>{list['completed']}</td>
+        <td><button>Delete</button></td>
+        <td><button>Edit</button></td>
+        <td><button>Details</button></td>
       </tr>
     )
   })
