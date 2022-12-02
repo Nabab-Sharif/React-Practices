@@ -1,27 +1,16 @@
 
 import React from 'react';
-import cogoToast from 'cogo-toast';
-
-
+import ReactHtmlParser from 'react-html-parser';
 
 const App = () => {
 
-  const ErrorToast=()=>{
-    cogoToast.error("Your Toast Content");
-  }
-
-  const SuccessToast=()=>{
-    cogoToast.success("Your Toast Content")
-  }
-
+  let HTMLString = "<h1>hello</h1>"
 
   return (
     <div>
-      <button onClick={ErrorToast}>Error</button>
-      <button onClick={SuccessToast}>Success</button>
+      {ReactHtmlParser(HTMLString)}
     </div>
   )
-}
-
+};
 
 export default App;
